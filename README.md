@@ -37,7 +37,27 @@ You will need to restart VS Code to activate the extension.
 
 ## Configure Extension Settings
 
-ToDo
+Open VS Code settings.json.
+`File -> Preferences -> Settings -> Extensions -> Scroll down and find "Edit in settings.json"`
+
+Add the following entry to asociates the CRD schemas from this extension with the applicable yaml files in a glob pattern. Then Save the change.
+
+```
+    "yaml.schemas": {
+        "file:///<path of schemas json file>": ["<yaml files glob pattern>"]
+    }
+```
+    * `<path of schemas json file>` of this extension is `<home_directory>/.vscode/extensions/crd-validation-tool-0.0.1/schemas/crd-definitions.json`. 
+    * The `<yaml files glob pattern>` could be `*.eventing.yaml`, `*.iter8.yaml`, etc. An example is shown below.
+
+    ```
+    "yaml.schemas": {
+        "file:///<user home directory>/.vscode/extensions/crd-validation-tool-0.0.1/schemas/crd-definitions.json": ["*.eventing.yaml"]
+    }
+    ```
+## Try It
+
+You can try it out by creating a yaml file named e.g. test.eventing.yaml. Pressing Ctl + Space keys willshow pop-up menu for templates and suggestions.
 
 ## Uninstall
 
