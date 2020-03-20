@@ -1,0 +1,23 @@
+{
+    "name": "k8s-crd-valition",
+    "displayName": "k8s CRD validation extension",
+    "description": "k8s CRD validation extension",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.42.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "yaml",
+                "path": "./snippets/snippets.json"
+            }
+        ]
+    },
+    "extensionDependencies": [
+        "redhat.vscode-yaml"
+    ]
+}
