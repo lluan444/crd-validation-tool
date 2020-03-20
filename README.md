@@ -26,10 +26,10 @@ Initial release including support for the following:
 
 ## Install
 
-You need the github.ibm.com token to access the repository, please [get your github token](https://github.ibm.com/settings/tokens) and set it in `IBM_GITHUB_TOKEN`. Then, run:
+Run:
 
 ```
-curl -sL 'https://${IBM_GITHUB_TOKEN}@raw.github.ibm.com/seed/crd-validation-tool/master/hack/install.sh' | bash 
+curl -sL 'https://raw.githubusercontent.com/lluan444/crd-validation-tool/master/hack/install.sh' | bash 
 ```
 This will install the CRD validation extention to your VS Code under the directory of `~/.vscode/extentions/crd-validation-tool-xxx`.
 
@@ -52,7 +52,7 @@ Add the following entry to asociates the CRD schemas from this extension with th
 
     ```
     "yaml.schemas": {
-        "file:///<user home directory>/.vscode/extensions/crd-validation-tool-0.0.1/schemas/crd-definitions.json": ["*.eventing.yaml"]
+        "file:///<user home directory>/.vscode/extensions/crd-validation-tool-0.0.1/schemas/crd-definitions.json": ["*.eventing.yaml", "*.iter8.yaml"]
     }
     ```
 ## Try It
