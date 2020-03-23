@@ -99,5 +99,28 @@
 			"      sampleSize: ${15:5}"
 		],
 		"description": "Automated canary releases with iter8 on Knative template"
+	},
+	"IBM Cloud Service":{
+		"prefix": "IBM CloudService",
+		"body": [
+			"apiVersion: ibmcloud.ibm.com/v1alpha1",
+			"kind: Service",
+			"metadata:",
+			"  name: ${1:myservice}",
+			"spec:",
+			"  plan: ${2:planname}",
+			"  serviceClass: ${3:serviceclass}"
+		]
+	},
+	"IBM Cloud Binding":{
+		"prefix": "IBM CloudBinding",
+		"body": [
+			"apiVersion: ibmcloud.ibm.com/v1alpha1",
+			"kind: Binding",
+			"metadata:",
+			"  name: ${1:mybinding}",
+			"spec:",
+			"  serviceName: ${2:servicename}"
+		]
 	}
 }
